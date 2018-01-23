@@ -1,0 +1,30 @@
+<html>
+<meta charset="UTF-8">
+<body>
+<h1>Привет, мир!</h1>
+<p>Моя первая веб-страничка.</p>
+<input value="Старт" onclick="start()" type="button">
+<input value="Стоп" onclick="stop()" type="button">
+<script>
+	var intervalId;
+	
+	var counter = 1;
+	var printMessage = function () {
+		console.log("Счетчик: " + counter + " сек");
+		counter++;
+	};
+	
+	function start() {
+		intervalId = setInterval(printMessage, 1000);
+    };
+	
+	function stop() {
+		clearInterval(intervalId);
+    }
+	
+	(function () {
+		//var intervalId = setInterval(printMessage, 1000);
+	}());
+</script>
+</body>
+</html>
